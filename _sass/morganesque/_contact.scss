@@ -1,0 +1,129 @@
+.contact-form {
+	position:relative;
+	top:0;
+	left:0;
+	margin-bottom:1em;
+	background-image:(url(../img/texture-42.png), radial-gradient(#999,#666));
+	transition:all 0.3s ease-out;
+
+	&.focus {
+		top:-5px;
+		box-shadow:0px 5px 10px rgba(black,0.22);		
+	}
+
+	// border-radius:1em);
+	border:2px solid rgba(white,0.76);
+	background:rgba(black,0.76);
+	padding:1.5em;
+	color:white;
+
+	font-size:0.67em;
+    line-height:1.5em;
+
+	& p {
+		margin:0 0 1em; padding:0 0 1em;
+		position:relative;		
+
+		&:last-child {
+			margin:0;
+		}
+	}
+
+	label {
+		text-align:left;
+		display:block;
+		padding-bottom:0.5em;
+	}
+
+	textarea,input {
+		width:100% !important;
+		color:#666;
+		border:none;
+		padding:1em;
+		font-size:0.88em;
+		font-family:Helvetica, Arial, sans-serif;
+	}
+
+	textarea {
+		height:12em;
+	}
+
+	.req {
+		position:absolute;
+		top:0.25em;
+		right:0.25em;
+		font-size:0.7em;
+		color:black;
+
+		&:before {
+			content:'* ';
+		}
+	}
+}
+
+div.wpcf7 {
+	position:relative;
+	margin: 0;
+	padding: 0;
+}
+
+div.wpcf7-response-output {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:100%;
+	padding:3em 1em;	
+	margin:0;
+	color:white;
+	background:rgba(black,0.95);
+	z-index: 101;
+
+	a {
+		display:block;
+		color:white;
+		padding-top:1em;	
+	}
+}
+
+// div.wpcf7-mail-sent-ok {border: 2px solid #398f14;}
+// div.wpcf7-mail-sent-ng {border: 2px solid #ff0000;}
+// div.wpcf7-spam-blocked {border: 2px solid #ffa500;}
+// div.wpcf7-validation-errors {border: 2px solid #f7e700;}
+
+span.wpcf7-form-control-wrap {position: relative;}
+
+span.wpcf7-not-valid-tip {
+	position: absolute;
+	top:5%;
+	right:5%;
+	z-index: 100;
+	background: #fff;
+	border: 1px solid #ff0000;
+	width: 90%;
+	color:red;
+	padding:0.5em;
+}
+
+span.wpcf7-not-valid-tip-no-ajax {
+	color: #f00;
+	font-size: 10pt;
+	display: block;
+}
+
+span.wpcf7-list-item {
+	margin-left: 0.5em;
+}
+
+.wpcf7-display-none {
+	display: none;
+}
+
+div.wpcf7 img.ajax-loader {
+	border: none;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+div.wpcf7 .watermark {
+	color: #888;
+}

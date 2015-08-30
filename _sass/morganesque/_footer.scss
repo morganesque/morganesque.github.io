@@ -1,0 +1,119 @@
+.footer {
+
+    .the__groover {
+        @extend %grid__item;
+    }
+
+    .top {
+        @extend %one-whole;
+        @extend %b40-two-fifths;
+
+        margin-bottom:1em;
+
+        h2,p {
+            background:rgba(white,0.95);
+            padding:0.5em 1em;
+            margin-bottom:0.25em;
+        }
+    }
+
+    .links {
+        @extend %one-whole;
+        @extend %b30-three-sixths;
+        @extend %b40-three-tenths;
+    }
+    .colo {
+        @extend %one-whole;
+        @extend %b30-three-sixths;
+        @extend %b40-three-tenths;
+    }
+
+    // padding:0 2em 3em;
+    text-align:left;    
+    background-size:128px;
+    .m-no-svg & { background-size:auto; }
+
+    h4 {
+        margin:0 0 0.25em; padding:0.25em 0.5em; 
+        text-align:left;
+        &:after {content:':';}
+    }
+
+    .box {
+        margin-top:1.2em;   
+        text-align:center;
+        padding:0.5em;
+        @media only screen and ( max-width: 30em ) { margin-bottom:2em; } // 40*16px    
+        border-radius:0.25em;                
+        background:rgba(white,0.95);
+    }
+
+    ul {
+        margin:0 1.5em;padding:0;
+
+        li {
+            line-height:1.2em;        
+            text-align:left;
+            color:red;
+            a {
+                &:link,
+                &:visited {
+                    font-size:0.67em;
+                    color:black;
+                }
+                &:hover,
+                &:active {                    
+                    color:red;
+                }
+            }  
+
+            // &.sass {
+            //     a {
+            //         // width:50%;
+            //         display:inline-block;
+            //     }
+            //     a:first-child {text-align:right}
+            //     a:last-child {text-align:left}
+            //     // .amp {display:none}
+            // }           
+        }        
+    }
+
+
+
+    .copy {
+        @extend %grid__item;
+        font-size:0.5em;
+        margin-top:2em;
+        text-align: right;
+        color:white;
+        padding-right:1em;
+        background:rgba(black,0.9);
+    }
+
+    // @media only screen and ( max-width: 40em ) { // 640px
+        
+    //     .box {font-size:0.8em;}
+
+    //     li {
+    //         a:link,
+    //         a:visited {
+    //             display:block;
+    //             // padding:1em 0.5em;                    
+    //             // border:1px solid rgba(white,0.42);
+    //             margin-bottom:0.5em;
+    //             text-decoration: none;
+    //         }
+    //         a:hover,
+    //         a:active {}
+
+    //         &.sass {
+    //             a {
+    //                 width:50%;
+    //                 display:inline-block;
+    //             }
+    //             .amp {display:none}
+    //         }
+    //     }
+    // } // below 800px
+}

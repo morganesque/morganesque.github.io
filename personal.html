@@ -1,0 +1,109 @@
+---
+layout: plain
+id_string: this_time_its_personal
+body_class: single
+permalink: /this/time/its/personal/
+---
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Morganesque - Personal Projects</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="stylesheet" href="/css/personal.css">
+        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6272452/614482/css/fonts.css" />
+        <style>body{font-family:'Archer SSm A','Archer SSm B';font-weight:500;font-style:normal;}</style>
+        <script src="/js/all-personal.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="jayz">
+
+            <h1>Personal<br /><span>Projects</span></h1>
+
+            <p class="standfirst">Here are a few things I've done over the years. Just for the fun of it!</p>
+
+            <ul class="project__list"><!--
+            {% for project in site.data.projects %}
+                --><li class="project">                
+                    <a class="project__link" href="{{ project.link }}">
+                        <h2 class="project__title">{{ project.name }}</h2>
+                        <p class="project__desc">
+                            {{ project.desc }}<br />
+                            <span class="date">Last updated {{ project.month }} {{ project.year }} {{ project.date_instead }}</span>
+                        </p>                    
+                        
+                        <svg width="300" height="300" viewBox="0,0,300,300" id="svg{{ forloop.index }}" class="svg" version="1.1" preserveAspectRatio="xMidYMid slice"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+                    </a>
+                </li><!--
+            {% endfor %}                
+            --></ul>
+
+        </div><!-- .jayz -->
+
+        <p class="standfirst">&#8598;<a href="http://morganesque.com">morganesque</a></p>
+
+        <!-- <div id="cover"></div> -->
+
+        <script type="text/javascript">
+
+            // sif - self invoking function
+            (function($)
+            {
+                /*
+                    Quick function for generating random numbers within a range.
+                */
+                function _r(a,b)
+                {
+                    var r;
+                    if (a > 1 && b > 1) r = Math.floor(a+Math.random()*(b-a));
+                    else r = a+Math.random()*(b-a); 
+                    return r;
+                }
+
+                var jq = $('.svg'); // all the SVGs
+                var p = Math.random()*360; // randomly shove everything along slightly.
+
+                jq.each(function(i)
+                {   
+                    var r = p + 360/jq.length * i;      // random number for hue
+                    var col = Color().hsl([r,100,30]);  // gnerate a colour from it.
+
+                    var s = Snap('#'+$(this).attr('id'));       
+                    
+                    s.rect(0,0,300,300).attr({fill:col.hexString()});
+
+                    s.circle(_r(50,250), 200, 160).attr({stroke:"#000", "stroke-width":"2", opacity:_r(0.1,0.2)});
+                    s.circle(_r(50,250), 200, 160).attr({stroke:"#000", "stroke-width":"2", opacity:_r(0.1,0.2)});
+
+                    s.circle(_r(50,250), 200, 80).attr({stroke:"#000", fill:"transparent", "stroke-width":"2", opacity:_r(0.1,0.2)});
+                    s.circle(_r(50,250), 200, 120).attr({stroke:"#000", fill:"transparent", "stroke-width":"2", opacity:_r(0.1,0.2)});
+
+                    s.circle(_r(50,250), 200, 80).attr({stroke:"#FFF", "stroke-width":"2", opacity:_r(0.1,0.2)});
+                    s.circle(_r(50,250), 200, 120).attr({stroke:"#FFF", "stroke-width":"2", opacity:_r(0.1,0.2)});
+
+                    s.circle(_r(50,250), 150, 160).attr({stroke:"#000", fill:"transparent", "stroke-width":"2", opacity:_r(0.1,0.2)});
+                    s.circle(_r(50,250), 250, 160).attr({stroke:"#000", fill:"transparent", "stroke-width":"2", opacity:_r(0.1,0.2)});
+                
+                });
+
+            })(Zepto); // sifends
+        </script>               
+
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-20506545-1');ga('send','pageview');
+        </script>        
+    </body>
+</html>

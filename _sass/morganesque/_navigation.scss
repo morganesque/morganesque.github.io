@@ -1,0 +1,58 @@
+.navigation {
+    text-align:left;
+    position:fixed;
+    z-index:1000;
+    top:-0.12em;
+    left:5%;
+    font-size:2em;
+    padding:0;
+    a {color:white;text-decoration:none}
+
+    .top {
+        position:relative;
+        z-index:2;
+    }
+
+    .menu-icon {        
+        display:block;
+        padding:0.25em;
+        background-color:black;
+    }
+
+    .menu {
+        font-size:0.38em; /* 0.38 */
+        margin:0;padding:0;
+        position:absolute;
+        top:-240px;
+        left:0px;
+        width:100%;
+        list-style:none;
+        opacity:0.1;
+
+        li {
+            margin:0;padding:0;
+            background:rgba(black,0.86);
+            overflow:hidden;
+            a {
+                display:block;
+                padding:0.5em 1em 0.5em 0.7em;
+                white-space:nowrap;
+                transition:background-color 0.25s ease-out;
+                &:hover {
+                    background:white;
+                    color:black;
+                }
+
+                span {
+                    margin-right:0.5em;
+                    padding:0.25em 0.5em 0.2em;
+                    line-height:1em;
+                    border:1px solid white;
+                    text-transform:uppercase;
+                    border-radius:0.25em;
+                }
+            }
+            color:white;
+        }
+    }
+}

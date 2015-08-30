@@ -1,0 +1,163 @@
+.portfolio {
+
+    @extend %grid--full;
+    // @extend %grid;
+    margin:0 auto 2em;
+    width:90%;
+
+    .single & {
+        max-width:36em;
+    }
+}
+
+.project-box {
+    @extend %b40-one-half;
+    @extend %b70-one-third;
+    @extend %b100-one-quarter;
+
+    .ie & {
+        width:48%;
+        margin-right:2%;
+        float:left;
+        display:block;
+    }
+}
+
+.last2 {display:none}
+@media only screen and ( min-width: 100em ) { // above 1280px 
+    .last2 {display:inline-block;}
+} 
+
+.project {
+    display:block;
+    position:relative;
+    overflow:hidden;
+    margin:0.5em 0;
+    color:black;
+    
+    @media only screen and ( min-width: 40em ) { margin:0.25em } // 60*16px
+
+    height:12em;
+
+    background-repeat:no-repeat;
+    background-size:cover;      
+    background-color:#eee;
+    background-position:top left;
+
+    .overlay {
+        position:absolute;
+        top:0;left:-5%;
+        width:110%;height:100%;
+        background-color:black;
+        z-index:1;
+        transition:opacity 0.3s ease-in;  
+        opacity:0.42;
+    }
+
+    .title {     
+        position:absolute;
+        bottom:100%;
+        left:-5%;
+        width:110%;   
+        font-size:1.4em;
+        color:#999;
+        color:rgba(white,0.76);
+        margin:0;
+        padding:3em 1em 0.5em;
+        background:rgba(black,0.76);
+        transition:all 0.3s ease-out;
+        // opacity:0.01;
+
+        .ie & {
+            background-color:black;
+        }
+        .ie7 & {
+            left:0;width:100%;padding:3em 0 0.5em;color:#999;text-decoration:none;
+        }
+
+    }
+
+    .ie &,
+    .m-touch &,
+    &:hover {
+
+        .title {
+            // opacity:1;    
+            bottom:62%;
+            .single & {bottom:55%;}
+        }
+        .overlay {
+            opacity:0;
+        }
+    }
+
+    .tags {
+        width:100%;
+        padding:0.5em 1em;
+        background-color:white;
+        display:none;
+    }
+
+    .view {
+        position:absolute;
+        bottom:0;left:50%;
+        margin-left:-2em;
+        display:none;
+    }
+}
+
+.portfolio-list {
+    margin-bottom:2em;
+    font-size:0.88em; 
+
+    .pic {
+        margin-bottom:1em;
+    }
+    
+    .links {
+        width:100%;
+        max-width:320px;
+        margin:0 auto;
+
+        .ie & {
+            width:60%;
+        }
+
+        @media only screen and ( min-width: 64em ) { // above=min 1024px 
+            max-width:480px;
+        } 
+    }
+
+    a:link,
+    a:visited {
+        display:block;
+        text-align:left;
+        margin:0 auto;
+        padding:0.5em;
+        text-decoration:none;        
+        border:1px solid #eee;
+        background:white;   
+    }
+    a:hover,
+    a:active {
+        background:#eee;
+        border:1px solid #ccc;
+    }
+    
+    .image {
+        width:48px;
+        height:48px;
+        display:inline-block;
+        margin-right:1em;
+        border:1px solid #ccc;
+        background-size:cover;
+    }
+
+    span {
+        color:#999;
+    }
+
+    @media only screen and ( min-width: 30em ) { // above=min 40*16px 
+        font-size:0.88em;
+    } 
+}

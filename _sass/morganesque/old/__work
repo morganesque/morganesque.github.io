@@ -1,0 +1,122 @@
+.work {
+    list-style: none;
+    margin-bottom:0;
+}
+
+.project {    
+    background:transparent url('../img/project-back.svg') no-repeat scroll 0px 50px;
+    background-size:cover;    
+    position: relative;
+    float:left;
+    width:100%;
+    height:240px;        
+    margin-bottom:2em;
+    overflow:hidden;
+    @include single-transition(background-position, 0.3s, ease-out);    
+    
+    &.num3 {display:none;}
+    &.num6 {display:none;}
+    &.num9 {display:none;}
+    
+    @media only screen and ( min-width: 768px ) { 
+        width:46%;
+        margin:0 2% 2em;
+        &.num6 {display:block}
+        &.num9 {display:none;}
+    }
+    
+    @media only screen and ( min-width: 960px ) { 
+        width:42%;
+        margin:0 4% 4em
+    }    
+    
+    @media only screen and ( min-width: 1024px ) { 
+        width:29.333333333333%;
+        margin:0 2% 3em;
+        &.num9 {display:block;}
+    }
+    
+    .overlay {
+        position: absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        z-index:0;
+        background-image:url(../img/overlay.png);
+    }
+    
+    .title {
+        position:relative;
+        color:rgba(black,0.76);
+        background-color:#BBB;
+        margin-bottom:0;
+        text-align:left;        
+        padding:0.5em;
+        line-height:1.1em;
+        background:#666 (url(../img/texture-42.png)) repeat scroll top left;
+        border-bottom:2px solid white;
+        span {color:rgba(white,0.96);font-weight:400;}
+    }
+
+    .desc { 
+        position:relative;
+        height:0px;
+        overflow:hidden;
+        margin:0;
+        text-align:left;
+        background:rgba(white,0.90);
+        line-height:1.2em;
+        padding:0 0.25em;
+        @include single-transition(all, 0.3s, ease-out);    
+    }
+    
+    .tags {
+        opacity:0;
+        position: relative;
+        top:-2em;
+        left:1em;
+        margin:1.5em 0;
+/*         border-left:1px solid black; */
+        
+        a {
+            display: block;
+            float: left;
+            clear: left;
+            font-size: 0.62em;
+            background:black;
+            color: white;
+            padding:.5em 1em;
+            margin-bottom:0.75em;
+            @include border-radius(1.5em);
+            
+            &:last-child {
+                margin-bottom:0;
+            }
+            
+            &:hover {
+                background:rgba(black, 0.76);
+            }
+        }
+    }
+    
+    .view {
+        position:absolute;
+        bottom:-100px;
+        right:1em;
+        margin:0;        
+        border:1px solid rgba(black,0.42);
+        @include single-transition(bottom, 0.3s, ease-out);            
+    }
+    
+    &.hover,
+    &:hover {
+        background-position: 0px 20px;
+        .desc {height:66px;padding:0.25em 0.75em 0;}
+        .tags {opacity:1}
+        .view {bottom:1em}
+        .overlay {background-color:rgba(black,0.76)}
+    }  
+    
+
+}

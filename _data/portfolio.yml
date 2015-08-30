@@ -1,0 +1,40 @@
+- name: leedsmarkets
+  title: Leeds Markets
+  sub_title: Website
+  tags: 
+  - Interaction Design
+  - User Experience
+  - Visual Design
+- name: amblr
+  title: Amblr
+  sub_title: iPhone App
+  tags: 
+  - Interaction Design
+  - iPhone
+  - Visual Design
+- name: e4skins
+  title: E4 Skins
+  sub_title: MySpace Page
+  tags: 
+  - Visual Design
+  - Web Build
+- name: hyperlife 
+  title: Hyperlife
+  sub_title: Facebook Game
+  tags: 
+  - Interaction Design
+  - User Experience
+  - Visual Design
+- name: wirelessgrids 
+  title: Wireless Grids
+  sub_title: Animation
+  tags: 
+  - Animation
+  - Flash                                     
+- name: wordsandpics
+  title: 'Words&amp;Pictures'
+  sub_title: Website
+  tags: 
+  - Interaction Design
+  - Web Build
+  - Wordpress

@@ -1,0 +1,31 @@
+.skills {
+    position:relative;
+    background-color: $col-white;
+    box-shadow:rgba(black, 0.42) 0px 0px 5px;
+    border-radius:4px;
+    margin-bottom:4.5em;
+    padding:0.5em 1em;
+    overflow:hidden;
+    height:5em;    
+    
+    .description {
+        position:absolute;
+        top:1em;
+        left:10%;
+        width:80%;
+        opacity:0;
+        padding-bottom:0;
+        transition-property:opacity;
+        transition-duration:1s;
+        transition-timing-function:ease-out;
+    }
+    .description.showing {
+        opacity:1;
+    }
+    .description:before {
+        content: '\2026';
+    }
+    .description:after {
+        content: '\2026';
+    }    
+}

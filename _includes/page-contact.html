@@ -1,0 +1,38 @@
+<div class="big__bird contact" id="contact">
+    <div class="pic-container"><div class="pic spacer pic-phone"></div></div><!-- .pic-container -->
+    <div class="the__groover">
+        <h2 class="section-title">I want to contact him!</h2>        
+    </div><!-- 
+ --><div class="the__groover buttons">            
+        <p class="standfirst">Press a button, get in touch&hellip;</p>
+        <p class="link"><a class="button" href="tel:07974978707"><span class="icon icon7 image-icon"></span>0797&nbsp;497&nbsp;8707</a></p>
+        <p class="link"><a class="button" href="mailto:morganesque@gmail.com"><span class="icon icon8 image-icon"></span>morganesque@gmail.com</a></p>
+        <p class="link"><a class="button" href="skype:tomghijklmno?call"><span class="icon icon9 image-icon"></span>skype</a></p>
+    </div><!--
+ --><div class="the__groover twitter">
+        <p class="standfirst">&hellip;or go on the twitters.</p>
+        <div class="twitter-me">
+            <div class="twitter-top">
+                <img class="avatar" src="/img/twitter-me.jpg" alt="Tom Morgan">            
+                <p>Tom Morgan <br /><a href="http://twitter.com/morganesque">@morganesque</a></p>
+            </div>
+            <ul id="twitter_update_list">
+                <?php
+                    include ('lib/twitter-search.php');
+                    $twitter = new Twitter('morganesque');
+                    $tweets = $twitter->getTweets();                                                
+                    for($i=0; $i < 3; $i++)
+                    {                                        
+                        $d = $tweets[1][$i];            
+                        echo '<li><p class="body">'.$d['text'].'</p><p class="time">'.date('h:ia \&\m\d\a\s\h\; jS F Y', $d['time']).'</p></li>';
+                    }                
+                ?>     
+                <!-- <li>Oook! Twitter changed the API. Naughty Twitter!</li> -->
+            </ul>  
+            <p class="small">Pssssst! these are <?php 
+                if ($tweets[0] == 'cache') echo 'from the cache'; 
+                if ($tweets[0] == 'new') echo 'fresh from twitter'; 
+            ?>.</p>
+        </div><!-- .twitter-me -->    
+    </div>    
+</div><!-- .big__bird --> 

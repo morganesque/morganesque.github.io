@@ -1,0 +1,59 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+// @import "compass";
+/*
+@import "compass/layout/grid-background";
+@import "compass/css3/box-shadow";
+*/
+// @import "compass/css3/border-radius";
+
+@mixin inline-hack {
+    /* cross browser inline-block */
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    /* cross browser inline-block */
+    vertical-align:top;
+}
+
+@mixin inline-block-parent()
+{
+    &:after {
+        display: inline-block;
+        width: 100%;
+        content: '.';
+        font-size: 0;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+}
+
+@mixin tom-box-sizing($type) 
+{
+    -moz-box-sizing: $type; 
+    -webkit-box-sizing: $type; 
+    box-sizing: $type;
+}
+
+// @mixin background-rgba($color, $amount)
+// {
+//     background:$color;
+//     background:rgba($color, $amount);
+// }
+
+@import "normalize";
+@import "csswizardry-grids";
+@import "morganesque";
+
+//@import "_1reset.scss" ;      // reset / clearfix / starting point.
+//@import "tom/1normalize.scss" ;    // reset / clearfix / starting point.
+//@import "tom/1useful.scss" ;       // reset / clearfix / starting point.
+//@import "tom/2fonts.scss" ;        // Setting up the font faces, sizes, weights etc.
+//@import "tom/3shared.scss" ;       // Really small rulesets that are very specific.
+//@import "tom/4objects.scss" ;      // Incredibly generic, will only ever be extended (thus need to appear early).
+//@import "tom/5generic.scss" ;      // Begin styling elements like headings, paragraphs, tables, lists etc. No classes. 
+//@import "tom/6specific.scss" ;     // Here we actually start to build particular things like navs, image galleries etc.
+//@import "tom/7helpers.scss" ;      // These classes override all other styles (error states, content hiders etc).

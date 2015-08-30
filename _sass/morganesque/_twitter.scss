@@ -1,0 +1,55 @@
+.twitter {
+
+    @media only screen and ( max-width: 40em ) { margin-top:2em; } // 40*16px margin-top:2em;   
+
+    a {
+        color:#0084b4;
+        text-decoration:none;
+
+        &:hover {
+            color:black;
+            text-decoration:underline;
+        }
+    }
+
+    .twitter-me { 
+        font-size:0.67em;
+        line-height:1.5em;
+        width:90%;
+        max-width:500px;
+        margin:0 auto;
+        padding:1.5em;       
+        background:white url('../img/twitter-logo.png') no-repeat scroll 90% 1em;
+        border-radius:0.25em;
+    }
+    .twitter-top {
+        @extend .cf;
+
+        p {
+            text-align:left;
+            float:left;
+            margin:0;
+        }
+    }
+    .avatar {float:left;margin-right:0.5em;}
+    ul {
+        margin:0;padding:0;        
+        list-style:none;        
+    }
+    li {
+        text-align:left;
+        background:rgba(white,0.76);
+        border-top:1px solid #ddd;
+        padding:0.75em 0 0;
+        margin:0.75em 0 0 ;
+    }
+    .body {
+        margin:0 0 0.25em;
+    }
+    .time {
+        font-family:Helvetica, Arial, sans-serif;
+        font-size:0.75em;
+        color:rgba(black,0.62);
+        margin:0;
+    }
+}

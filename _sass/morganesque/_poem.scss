@@ -1,0 +1,39 @@
+.poem {
+    margin:0 auto 2em;
+    max-width:30em;
+    padding:2em;
+    text-align:left;
+    line-height:1.42em;
+    background-color:#eee;
+    border:1px solid #999;
+    background:white;
+
+    .verse {
+        margin-bottom:2em;
+
+        &:nth-child(even) {text-align:right}
+    }
+
+    p {margin-bottom:0}
+
+    p.sub {font-size:0.88em}
+}
+
+$link: #C00;
+$hover: #F00;
+$range: 40;
+$incre: 360 / $range;
+@for $i from 1 through $range 
+{
+    .link-#{$i} 
+    {         
+        $link: adjust-hue($link, $incre);
+        $hover: adjust-hue($hover, $incre);
+
+        &:link,
+        &:visited {color: $link}
+        
+        &:active,
+        &:hover {color: $hover}
+    }
+}

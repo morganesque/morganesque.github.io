@@ -1,0 +1,45 @@
+- name: HTTPflies
+  desc: A miscellany of HTTP status codes (co-produced with @DeanVipond)
+  link: http://httpflies.com/
+  month: Sep
+  year: 2013
+
+- name: My Delicious Bookmarks
+  desc: Analysis of the bookmarks I've saved in Delicious since 2005.
+  link: http://del.ghijklmno.net/
+  month: Jun
+  year: 2012
+
+- name: Mister Maths
+  desc: An iPad web app for my children to practice their times tables (really tailored for touch).
+  link: http://morganesque.github.io/mister-maths/
+  month: Jun
+  year: 2012  
+
+- name: 100 Numbers
+  desc: A toy for exploring numbers and patterns (it's built in Flash... sorry!)
+  link: http://ohn.ghijklmno.net/
+  month: May
+  year: 2012
+
+- name: Ghijklmno
+  desc: Blogging infrequently since 2001.
+  link: http://ghijklmno.net/
+  date_instead: too long ago!
+
+- name: Birdplant
+  desc: A web comic strip about<br />a bird who's a plant.
+  link: http://birdplant.ghijklmno.net/
+  month: May
+  year: 2009
+
+- name: My Drawings
+  desc: A series of cartoons with captions which are funny (peculiar).
+  link: http://my.ghijklmno.net/drawings/
+  month: Jun
+  year: 2005
+
+- name: Github
+  desc: ... and finally my github account has a number of other little things.
+  link: https://github.com/morganesque
+  date_instead: just yesterday

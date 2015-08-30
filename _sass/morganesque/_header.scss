@@ -1,0 +1,39 @@
+.header {
+
+    position:relative;
+    margin-bottom:1em;
+
+    @media only screen and ( min-width: 20em ) { // above=min 30*16px 
+        top:10px;
+    } 
+    
+    .is { // is
+        margin:-2em auto 0em;    
+        transition:margin-top .5s ease-out;        
+        @media only screen and ( min-width: 40em ) { margin-top:-2em; }     // 480
+        @media only screen and ( min-width: 60em ) { margin-top:-3em; }     // 1024
+        @media only screen and ( min-width: 70em ) { margin-top:-4em; }     // 1280
+    }
+
+    .name { // tom morgan
+        position:relative;
+        left:5px; top:5px;
+        margin:-0.4em 0 0; padding:0.5em 0;
+        color:#000;
+        color:rgba(black, 0.76);
+        font-size:1.5em;
+        font-weight:500;
+        line-height:0.70;
+        z-index:1;
+        transform:rotate(2deg);        
+        @media only screen and ( min-width: 40em ) { font-size:2em; } // *16px    
+    }
+
+    .whois {margin-bottom:1em;}
+
+    .company {
+        position:absolute;
+        width:98%;
+        margin:0 auto;
+    }     
+}

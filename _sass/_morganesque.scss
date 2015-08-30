@@ -1,0 +1,73 @@
+/* force a vertical scrollbar to prevent a jumpy page */
+// html {overflow-y: scroll;}
+
+@mixin isCircle($diam)
+{           
+    width:$diam;
+    height:$diam;
+    border-radius:$diam/2, $diam/2;  
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+.cf{
+    &:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+body {
+    font-family: 'Archer SSm A', 'Archer SSm B'; font-weight: 500; font-style: normal;
+}
+h3 {
+    font-weight:800;
+}
+
+/* scale images in IE7 more attractively */
+// .ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+// .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+.hide-text {
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@import 'morganesque/misc';
+@import 'morganesque/slabtext';
+@import 'morganesque/fluid-ratio';
+@import 'morganesque/images';
+@import 'morganesque/buttons';
+@import 'morganesque/logo';
+@import 'morganesque/header';
+@import 'morganesque/portfolio';
+@import 'morganesque/contact';
+@import 'morganesque/twitter';
+@import 'morganesque/navigation';
+@import 'morganesque/single';
+@import 'morganesque/footer';
+@import 'morganesque/vimeo';
+@import 'morganesque/poem';
+
+
+.debug {
+    font-family:"Courier New" Courier monospace;
+    position:fixed;
+    top:0px;
+    right:0px;
+    color:black;
+    padding:1em;
+    font-size:10px;
+    line-height:1.5em;
+}

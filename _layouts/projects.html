@@ -1,0 +1,30 @@
+{% include header.html %}
+
+    <div class="topper big__bird image-icon"><div></div></div>
+
+    <div class="container big__bird">
+
+        <div class="morganesque the__groover"><a class="logo nav-logo" href="/is/tom/morgan/"><div class="image-logo"></div></a></div>
+
+        <div class="the__groover">
+            <div class="headbar">
+                <div class="thumb" style="background-image:url({{ page.background_image }});"></div><!-- .thumb -->
+                <h1 class="title">{{ page.title }}<br /><span>{{ page.sub_title }}</span></h1>
+            </div>
+            <section class="body">                
+                    {{ content }}
+                    <div class="tags">
+                        <ul>
+                        	{% for item in page.tags %}
+                        		<li>{{ item }}</li>
+                        	{% endfor %}                            
+                        </ul>
+                    </div>
+            </section>
+        </div>
+        <?php // endwhile; endif; ?>
+    </div><!-- .container -->
+
+{% include page-portfolio-list.html %}
+{% include page-topper.html %}
+{% include footer.html %}

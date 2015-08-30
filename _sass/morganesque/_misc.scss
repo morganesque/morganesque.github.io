@@ -1,0 +1,331 @@
+// Here we actually start to build particular things like navs, image galleries etc.
+html {
+    font-size:100%; //  16 
+    @media only screen and ( min-width: 40em ) { font-size:125%; } // 20
+    @media only screen and ( min-width: 50em ) { font-size:150%; } // 24
+    
+    .ie & {background:#999;}
+}
+
+body {
+    margin:0 auto;padding:0;
+    text-align:center;
+    background-color:white;
+    color:rgba(black,0.76);
+    line-height:1.5em;
+
+    .ie & {width:640px;}
+}
+
+// a:link,
+// a:visited {
+//     color:rgba(black,0.76);
+
+//     .ie & {color:#666;}
+// }
+// a:active,
+// a:hover {
+//     color:black;
+// }
+
+a:link,
+a:visited {
+    color:#2735AE;
+    text-decoration:none;
+}
+a:hover,
+a:active {
+    color:#FF471A;
+}
+
+p {
+    margin:0 auto 1em;
+    max-width:40em;
+}
+
+.big__bird {
+    @extend %grid;
+    padding:0 2em;
+}
+
+.the__groover {
+    @extend %grid__item;
+}
+
+.job-title {
+
+    padding-bottom:2em;
+
+
+    @media only screen and ( min-width: 30em ) { 
+        background: transparent url(../img/graphics/god-touches-adam.png) no-repeat scroll center 20px;
+        background-size:contain;
+    }
+
+    .job {
+        // position:relative;
+        // background-size: cover;
+        color:#666;
+        margin:0 auto;
+        width:76%;
+        max-width:400px;
+        padding:1em;
+        text-transform: uppercase;
+        border:1px solid rgba(black,0.76);
+        background-color:white;
+
+        @media only screen and ( min-width: 30em ) { 
+            width:62%;
+            padding:1.5em 
+        }
+
+        @media only screen and ( min-width: 40em ) { 
+            width:42%;
+        }
+
+        @media only screen and ( min-width: 50em ) { 
+            width:35%;
+        }
+
+        span {
+            transition:opacity 0.5s ease-in;
+            line-height:1;
+        }
+    }
+}
+
+.skill {
+    position:relative;
+    margin-bottom:2em;  
+    padding:0;
+
+    // @media only screen and ( min-width: 40em ) { padding:0 } // *16px    
+    @media only screen and ( min-width: 50em ) { padding:0 1em} // *16px    
+
+    .pic {
+        $diam: 64px;            
+        position:absolute;
+        top:50%;
+        left:-1em;                   
+        width:$diam;
+        height:$diam;
+        margin-top:-$diam/2;
+        // border:0.1em solid rgba(black,0.62);
+        border-radius:$diam/2, $diam/2;        
+
+        @media only screen and ( min-width: 30em ) {  // 480px    
+            
+        }
+        @media only screen and ( min-width: 40em ) {  // 640px    
+
+        }
+        @media only screen and ( min-width: 50em ) 
+        { 
+            $diam: 80px;            
+            margin-top:-$diam/2;
+            width:$diam;
+            height:$diam;
+            border-radius: $diam/2 , $diam/2;
+        } 
+        box-shadow:rgba(black,0.4) 0 0 5px;
+        transform:rotate(180deg);
+        z-index:2;
+    }
+
+    h3 {
+        position:relative;
+        margin:0; padding:0.5em 0 0.5em 3em;
+        background-color:white;
+        text-align:left;
+        min-height:3em;
+        text-transform: uppercase;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+    }
+    p {
+        clear:both;
+        text-align:left;
+
+        @media only screen and ( min-width: 40em ) { 
+            text-align:justify;
+        }       
+    }
+}
+
+.contact {
+
+    .standfirst {
+        margin:0.25em 0 1.75em;
+        // border-top:1px solid rgba(black,0.12);
+    }
+
+    .link {
+        @include inline-hack();
+    }
+
+    .buttons {
+        @extend %b70-one-third;
+
+        padding-bottom:2em;
+    }
+
+    .form, .twitter {
+        @extend %b40-one-half;
+        @extend %b70-one-third;
+    }
+}
+
+.pic {    
+    display:block; .ie6 & {display:none}
+    margin:0 auto;
+    background-size:cover;
+    background-position:center center;
+    // used to be in .spacer
+
+    &.spacer {
+        height:0;
+        padding-top:81%;        
+        background-size:contain;            
+
+        .ie & {
+            height:200px;
+            padding:0;
+        }
+    }  
+
+    &.pic-int {background-image:url(../img/graphics/eric.png); }
+    &.pic-use {background-image:url(../img/graphics/waits.png); }
+    &.pic-fro {background-image:url(../img/graphics/rothko.png); }
+    &.pic-res {background-image:url(../img/graphics/kitson.png); }
+    &.pic-phone {background-image:url(../img/graphics/phone.png); }
+    &.pic-plant {background-image:url(../img/graphics/plant.png); }
+    &.pic-violin {background-image:url(../img/graphics/violin.png); }
+}
+
+.title {
+    font-weight:normal;
+    span {
+        color:rgba(white,1);
+    }
+}
+
+.section-title {
+    color:black; .ie & {color:black}
+    font-weight:400;
+    font-size:2.2em;
+    line-height:1em;
+    // @include text-shadow(0px 0px 4px rgba(black,0.76));
+    // text-transform:lowercase;
+
+    @media only screen and ( min-width: 30em ) { font-size:3.2em; }  
+    @media only screen and ( min-width: 45em ) { font-size:3em; }      
+    @media only screen and ( min-width: 63em ) { font-size:3em; }
+
+    // background:transparent url(../img/graphics/header-back.png) no-repeat scroll center bottom;
+    background-size:auto;
+
+    padding:0.25em 0 0;
+    margin:0 0 0.25em;
+
+    .what & {
+        margin-bottom:0.5em;
+        @media only screen and ( min-width: 54em ) { margin-top:1em; }  
+    }
+}
+
+.what {
+    .skill-box {
+        @extend %b40-one-half;
+        @extend %b100-one-quarter;         
+    }
+}
+
+.about-me {
+    p {
+        @media only screen and ( min-width: 60em ) {  
+            text-align:right;
+        } // 60*16px    
+    }
+
+    .march-map {
+        display:block;
+        padding:0;
+
+        @media only screen and ( min-width: 30em ) { // above 480px 
+            padding:0 2em 2em;
+        } 
+    }
+
+    .desc {
+        @extend %b60-four-twelfths;
+    }
+
+    .map {
+         @extend %b60-eight-twelfths;
+    }
+
+}
+
+.pic-container {
+    @extend %grid__item;
+    max-width:200px;
+    width:50%;
+    margin:0 auto;
+}
+
+.small {
+    font-size:0.75em;
+    font-family:monospace;
+    margin:2em 0 0;
+}
+
+
+.says {
+    color:rgba(black,0.42);
+    margin:0 0.5em 0 0;padding:0.4em 0.2em 0.2em 0.4em;
+    font-size:0.62em;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    // font-weight:bold;
+    font-family:Courier New, Courier, Lucida Console, monospace;
+    background-color:black;
+    line-height:1em;
+    color:white;
+    position:relative;
+    top:-0.15em;
+    display:inline-block;
+}
+
+.topper, .bottomer {
+    position:relative;
+    display:block;
+    background-size:64px;
+    background-position:left top;
+    // background-attachment:fixed;
+    z-index:2;
+
+    div {
+        height:32px;
+    }
+}
+
+.bottomer {
+    background-size:128px;
+    height:5em;
+    
+    a:link,
+    a:visited {
+        display:block;
+        width:50%;
+        min-width:240px;
+        padding:1em;
+        margin:1em auto;
+        text-decoration:none;
+        background:white;
+        background:rgba(white,0.76);
+    }
+    a:hover,
+    a:active {
+        background:white;
+    }
+}

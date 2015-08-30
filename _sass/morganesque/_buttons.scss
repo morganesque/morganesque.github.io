@@ -1,0 +1,83 @@
+.button {
+    @include inline-hack();     
+    transition:all 0.2s ease-out;
+    background:transparent;
+    font-weight:700;
+    border:1px dashed black;
+    border:1px dashed rgba(black,0.42);
+    border-radius:4px 4px;
+    padding:0.5em 1em;
+    margin:0 0.5em 0.5em;
+    text-decoration: none; // needed because of default textlink:hover has it.
+    
+    &:link {
+        color:rgba(black,0.76);
+        .ie & {color:#666;}
+    }
+
+    &:hover,
+    &:active {
+        color:black;
+        background:white;
+        background:rgba(white,0.95);
+        border:1px solid rgba(black,0.12);        
+    }
+
+    &:active {
+        position:relative;
+        top:2px;
+        left:0;
+    }
+
+    &.circle {
+        $diam: 6em;            
+        @include isCircle($diam);
+        margin:0 0.5em 1em;
+        padding:0.5em 0 0;        
+    }
+}
+
+
+
+$iconSize: 32px;
+$halfSize: $iconSize / 2;
+
+// .small {
+//     $diam:4.5em;            
+//     width:$diam;
+//     height:$diam;
+//     padding:0;
+// }
+
+.icon {
+    display:block;
+    margin:0 auto 0.5em;
+    width: $iconSize - 1px;
+    height:$iconSize;
+    transform:rotate(45deg);
+    
+    margin:0.5em auto 1em;
+
+    // box-shadow:0px 0px 10px rgba(black,0.2), inset 0px 0px 10px rgba(white,0.9); 
+    transition:all 0.5s ease-in;
+    
+    // @media only screen and ( min-width: 480px ) { transform:rotate(135deg); }
+    // @media only screen and ( min-width: 768px ) { transform:rotate(225deg); }
+    // @media only screen and ( min-width: 1024px ) { transform:rotate(315deg); }    
+
+    // .small & {
+    //     width:$halfSize + ($halfSize/2);
+    //     height:$halfSize + ($halfSize/2);
+    //     margin:0.75em auto 0.5em;
+    //     transform:rotate(135deg);
+    // }
+}
+.icon1 {background-position:0px 0px;}
+.icon2 {background-position:0px (-$halfSize)}
+.icon3 {background-position:0px (-$iconSize);}
+.icon4 {background-position:(-$halfSize) 0px}
+.icon5 {background-position:(-$halfSize) (-$halfSize)}
+.icon6 {background-position:(-$halfSize) (-$iconSize)}
+.icon7 {background-position:(-$iconSize) 0px;}
+.icon8 {background-position:(-$iconSize) (-$halfSize)}
+.icon9 {background-position:(-$iconSize) (-$iconSize)}

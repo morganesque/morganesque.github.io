@@ -1,0 +1,185 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+@import "mixins";
+@import "bower_components/normalize-css/normalize";
+@import "bower_components/inuit.css/inuit";
+
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+ .-no01 .image { background-image:url("../../img/poem/1.jpg"); }
+ .-no02 .image { background-image:url("../../img/poem/2.jpg"); }
+ .-no03 .image { background-image:url("../../img/poem/3.jpg"); }
+ .-no04 .image { background-image:url("../../img/poem/4.jpg"); }
+ .-no05 .image { background-image:url("../../img/poem/5.jpg"); }
+ .-no06 .image { background-image:url("../../img/poem/6.jpg"); }
+ .-no07 .image { background-image:url("../../img/poem/7.jpg"); }
+ .-no08 .image { background-image:url("../../img/poem/8.jpg"); }
+ .-no09 .image { background-image:url("../../img/poem/9.jpg"); }
+ .-no10 .image { background-image:url("../../img/poem/10.jpg"); }
+
+$text-opac:0.76;
+$background: rgba(blue,0.42);
+$white: rgba(white,0.1);
+$faded: rgba(white,0.05);
+
+@mixin pattern3() {
+	background-color: $background;
+	background-image: linear-gradient(rgba(black,0.07) 50%, transparent 50%),
+	linear-gradient(rgba(black,0.09) 50%, transparent 50%),
+	linear-gradient(transparent 50%, rgba(black,0.13) 50%),
+	linear-gradient(transparent 50%, rgba(black,0.15) 50%);
+	background-size: 41px, 79px, 131px, 503px;
+}
+
+@mixin pattern2() {
+	// background-color: $background;
+	background-image: linear-gradient(90deg, rgba(black,0.07) 50%, transparent 50%),
+	linear-gradient(90deg, rgba(black,0.09) 50%, transparent 50%),
+	linear-gradient(90deg, transparent 50%, rgba(black,0.13) 50%),
+	linear-gradient(90deg, transparent 50%, rgba(black,0.15) 50%);
+	background-size: 41px, 79px, 131px, 503px;
+}
+
+@mixin pattern() {
+	background-color:$background;
+	background-image:
+		linear-gradient($white 2px, transparent 2px),
+		linear-gradient(90deg, $white 2px, transparent 2px),
+		linear-gradient($faded 1px, transparent 1px),
+		linear-gradient(90deg, $faded 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+}
+
+@mixin oldpattern() {
+	background:
+	radial-gradient(rgba(black,0.4) 15%, transparent 16%) 0 0,
+	radial-gradient(rgba(black,0.4) 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	// background-color:darken(adjust-hue(blue,30),10);
+	background-color:rgba(blue,0.42);
+	background-attachment:fixed;
+	background-size:16px 16px;
+}
+
+html {
+	background-color:white;
+}
+
+body {
+	font-size:16px;	
+	color:rgba(black,0.76);
+	// color:darken(rgba(blue,$text-opac),25);	
+	// background-color:rgba(blue,0.05);
+	text-align:center;
+	margin:0;padding:0;
+	
+	font-family:'Archer SSm A','Archer SSm B';
+	font-weight:500;
+	font-style:normal;
+
+	@include aboveOrEquals(pem(600)) {font-size:22px;}
+	@include aboveOrEquals(pem(800)) {font-size:26px;}
+	@include aboveOrEquals(pem(1000)) {font-size:32px;}
+	@include aboveOrEquals(pem(1200)) {font-size:36px;}
+}
+
+body {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+);
+}
+
+a {
+	color:rgba(blue,$text-opac);
+	text-decoration:none;	
+
+	&:hover {
+		color:darken(adjust-hue(blue,30),10);
+	}
+}
+
+p {
+	margin:0;
+}
+
+h1 {
+	font-size:2em;
+	font-weight:400;
+	position:relative;
+	padding:0.5em;
+	background-image:url("../../img/poem/1.jpg");
+	background-position:center top;
+	background-size:cover;
+	background-attachment:fixed;
+	color:white;
+	line-height:1.1;
+
+	span {
+		font-size:1em;
+		text-transform:uppercase;
+		font-weight:500;
+	}
+}
+
+.subhead {
+	font-size:0.7em;
+	max-width:30em;
+	margin:1em auto 2em;
+	padding:0 1em;
+	border-bottom:1px solid rgba(black,0.76);
+	padding-bottom:1.5em;
+}
+
+.wrapper {
+	position:relative;
+}
+
+.block {	
+	position:relative;
+	margin-bottom:1em;
+}
+
+.image {
+	position:relative;
+	width:100%;
+	height:100px;
+	background-position:center bottom;
+	background-size:cover;
+	background-attachment:fixed;
+	margin:1.5em 0;
+
+	@include aboveOrEquals(pem(600)) {height:200px;}
+	@include aboveOrEquals(pem(800)) {height:250px;}
+	@include aboveOrEquals(pem(1000)) {height:300px;}
+	@include aboveOrEquals(pem(1200)) {height:350px;}
+}
+
+.cover {
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;
+	@include pattern2;
+}
+
+.verse {
+
+	text-align:center;
+	// padding-left:25%;
+
+	@include belowOrEquals(pem(480))
+	{
+		padding:0 1em;
+
+		p {
+			display:inline;
+		}
+	}
+}
+
+footer {
+	margin-top:-1em;
+	p {
+		font-size:12px;
+		padding:0 0 2em;
+	}
+}
