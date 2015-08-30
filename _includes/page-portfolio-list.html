@@ -4,13 +4,13 @@
         <p class="alt-standfirst">Those projects again</p>
     </div>
     <div class="the__groover">
-        <div class="links"><!-- 
+        <div class="links">
             {% for item in site.data.portfolio %}
-                --><a href="/did/{{ item.name }}/">
-                <div class="image" style="background-image:url(/img/portfolio/{{ item.name }}.jpg);"></div>
+                <a href="/did/{{ item.name }}/"><!--
+                --><div class="image" style="background-image:url(/img/portfolio/{{ item.name }}.jpg);"></div>
                 {{ item.title }} &mdash; <span>{{ item.sub_title }}</span>
-                </a><!-- 
+                </a>
             {% endfor %}                                          
-        --></div>
+        </div>
     </div>    
 </div><!-- .big__bird -->
