@@ -12,21 +12,13 @@
  --><div class="the__groover twitter">
         <p class="standfirst">&hellip;or go on the twitters.</p>
         <div class="twitter-me">
-            <div class="twitter-top">
+            <!-- <div class="twitter-top">
                 <img class="avatar" src="/img/twitter-me.jpg" alt="Tom Morgan">            
                 <p>Tom Morgan <br /><a href="http://twitter.com/morganesque">@morganesque</a></p>
-            </div>
+            </div> -->
             <ul id="twitter_update_list">
-                <?php
-                    include ('lib/twitter-search.php');
-                    $twitter = new Twitter('morganesque');
-                    $tweets = $twitter->getTweets();                                                
-                    for($i=0; $i < 3; $i++)
-                    {                                        
-                        $d = $tweets[1][$i];            
-                        echo '<li><p class="body">'.$d['text'].'</p><p class="time">'.date('h:ia \&\m\d\a\s\h\; jS F Y', $d['time']).'</p></li>';
-                    }                
-                ?>     
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/morganesque" data-widget-id="642982786966626304">Tweets by @morganesque</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>    
                 <!-- <li>Oook! Twitter changed the API. Naughty Twitter!</li> -->
             </ul>  
             <p class="small">Pssssst! these are <?php 

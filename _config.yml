@@ -14,3 +14,4 @@ github_username:  jekyll
 markdown: kramdown
 gems:
   - jekyll-redirect-from
+exclude: ['project.sublime-project','project.sublime-workspace']
