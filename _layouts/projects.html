@@ -11,13 +11,13 @@
                 <div class="thumb" style="background-image:url({{ page.background_image }});"></div><!-- .thumb -->
                 <h1 class="title">{{ page.title }}<br /><span>{{ page.sub_title }}</span></h1>
             </div>
-            <section class="body">                
+            <section class="body">
                     {{ content }}
                     <div class="tags">
                         <ul>
                         	{% for item in page.tags %}
                         		<li>{{ item }}</li>
-                        	{% endfor %}                            
+                        	{% endfor %}
                         </ul>
                     </div>
             </section>
