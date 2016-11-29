@@ -14,9 +14,9 @@ permalink: /is/not/a/poet/
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="favicon.ico">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->    
-        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6272452/614482/css/fonts.css" />        
-        <link rel="stylesheet" href="/css/poem.css">        
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+        <link rel="stylesheet" href="/css/poem.css">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -25,9 +25,9 @@ permalink: /is/not/a/poet/
         <h1>
             <span>My Skills</span><br />#8245-8276<br />(&amp; 117)
             <div class="cover"></div>
-        </h1>        
+        </h1>
         <div class="wrapper">
-            
+
             <p class="subhead">Being a poem which details some of stuff I've worked with over my career. It should help to confirm that if you're thinking of employing me it should most definitely not be to write poetry.</p>
 
             <section class="block -no01">
@@ -67,7 +67,7 @@ permalink: /is/not/a/poet/
                     <p>On <a href="http://upload.wikimedia.org/wikipedia/commons/4/45/Nokia6600.jpg">Nokia</a>, <a href="http://upload.wikimedia.org/wikipedia/commons/5/58/SonyEricsson_T610_AluminumHaze_front.jpg">SE</a> and <a href="http://upload.wikimedia.org/wikipedia/commons/e/e3/Samsung.Front.JPG">Samsung</a> machines,</p>
                     <p>with fiddly buttons and tiny screens,</p>
                     <p>we&rsquo;d wait while the data speed crawled.</p>
-                </div>    
+                </div>
                 <div class="image"><div class="cover"></div></div>
             </section>
             <section class="block -no05">
@@ -142,7 +142,7 @@ permalink: /is/not/a/poet/
             /*
                 create a random overlay colour for the photos.
             */
-            var col = Color().hsl([60+Math.random()*240,100,30]).alpha(0.42);  
+            var col = Color().hsl([60+Math.random()*240,100,30]).alpha(0.42);
             addcss('.cover { background-color:'+col.rgbString()+'; } ');
 
             /*
@@ -150,7 +150,7 @@ permalink: /is/not/a/poet/
             */
             $(document).on("ready",function(e)
             {
-                $('section.block .image').parallax({start:100,adjust:-200});    
+                $('section.block .image').parallax({start:100,adjust:-200});
             });
         </script>
 
@@ -162,6 +162,6 @@ permalink: /is/not/a/poet/
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-20506545-1');ga('send','pageview');
         </script>
-        
+
     </body>
 </html>
