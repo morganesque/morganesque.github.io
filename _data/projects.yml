@@ -1,12 +1,12 @@
 - name: HTTPflies
   desc: A miscellany of HTTP status codes (co-produced with @DeanVipond)
-  link: http://morganesque.com/httpflies/
+  link: http://morganesque.github.io/httpflies/
   month: Sep
   year: 2013
 
 - name: Resphrame
   desc: A useful little viewport resizing responsive development and testing thing
-  link: http://morganesque.com/resphrame/
+  link: http://morganesque.github.io/resphrame/
   month: Jul
   year: 2014
 
@@ -24,7 +24,7 @@
 
 - name: 100 Numbers
   desc: A toy for exploring numbers and patterns (it's built in Flash... sorry!)
-  link: http://morganesque.com/one-hundred-numbers/
+  link: http://morganesque.github.io/one-hundred-numbers/
   month: May
   year: 2012
 
